@@ -76,6 +76,7 @@ func Itemlist() fiber.Handler {
 
 		}
 		defer cursor.Close(c)
+		defer client.Disconnect(c)
 		// fmt.Println(item_collection)
 
 		response.Success = true
